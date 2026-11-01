@@ -1,0 +1,153 @@
+id,name,category,subcategory
+1,python,language,programming
+2,java,language,programming
+3,javascript,language,programming
+4,typescript,language,programming
+5,c++,language,programming
+6,c#,language,programming
+7,go,language,programming
+8,rust,language,programming
+9,swift,language,programming
+10,kotlin,language,programming
+11,php,language,programming
+12,ruby,language,programming
+13,scala,language,programming
+14,r,language,programming
+15,matlab,language,programming
+16,julia,language,programming
+17,elixir,language,programming
+18,haskell,language,programming
+19,lua,language,programming
+20,vb.net,language,programming
+21,assembly,language,programming
+22,dart,language,programming
+23,groovy,language,programming
+24,perl,language,programming
+25,vba,language,programming
+26,solidity,language,blockchain
+27,react,framework,frontend
+28,angular,framework,frontend
+29,vue.js,framework,frontend
+30,svelte,framework,frontend
+31,next.js,framework,frontend
+32,sveltekit,framework,frontend
+33,remix,framework,frontend
+34,node.js,framework,backend
+33,express,framework,backend
+34,fastapi,framework,backend
+35,django,framework,backend
+36,flask,framework,backend
+37,spring boot,framework,backend
+38,rails,framework,backend
+39,laravel,framework,backend
+40,phoenix,framework,backend
+41,actix,framework,backend
+42,yesod,framework,backend
+43,nestjs,framework,backend
+44,.net,framework,backend
+45,sql,database,querying
+46,postgresql,database,relational
+47,mysql,database,relational
+48,mongodb,database,nosql
+49,redis,database,cache
+50,cassandra,database,nosql
+51,elasticsearch,database,search
+52,dynamodb,database,nosql
+53,sqlite,database,relational
+54,aws,cloud,infrastructure
+55,azure,cloud,infrastructure
+56,gcp,cloud,infrastructure
+57,docker,devops,containers
+58,kubernetes,devops,orchestration
+59,terraform,devops,iac
+60,ansible,devops,automation
+61,jenkins,devops,ci/cd
+62,github actions,devops,ci/cd
+63,gitlab ci,devops,ci/cd
+64,prometheus,monitoring,metrics
+65,grafana,monitoring,visualization
+66,datadog,monitoring,apm
+67,splunk,monitoring,logs
+68,elasticsearch,monitoring,logs
+69,machine learning,ai,modeling
+70,deep learning,ai,modeling
+71,tensorflow,ai,framework
+72,pytorch,ai,framework
+73,keras,ai,framework
+74,scikit-learn,ai,ml
+75,xgboost,ai,ml
+76,lightgbm,ai,ml
+77,opencv,ai,computer vision
+78,nlp,ai,nlp
+79,transformers,ai,nlp
+80,hugging face,ai,nlp
+81,langchain,ai,llm
+82,openai,ai,llm
+83,pandas,data,analysis
+84,numpy,data,analysis
+85,tableau,data,visualization
+86,power bi,data,visualization
+87,excel,data,analysis
+88,power query,data,etl
+89,power pivot,data,analysis
+90,dax,data,analysis
+91,airflow,data,orchestration
+92,spark,data,big data
+93,kafka,data,streaming
+94,flink,data,streaming
+95,hadoop,data,big data
+96,hive,data,warehousing
+97,pyspark,data,big data
+98,sql,language,querying
+99,nosql,database,nosql
+100,graphql,api,query
+101,rest,api,architecture
+102,grpc,api,communication
+103,microservices,architecture,pattern
+104,serverless,architecture,pattern
+106,lambda,cloud,serverless
+107,cloudformation,cloud,iac
+108,burp suite,security,testing
+109,metasploit,security,testing
+110,owasp,security,standards
+111,penetration testing,security,testing
+112,vulnerability assessment,security,testing
+113,git,devops,version control
+114,github,devops,platform
+115,gitlab,devops,platform
+116,bitbucket,devops,platform
+117,ci/cd,devops,pipeline
+118,testing,qa,automation
+119,unit testing,qa,automation
+120,integration testing,qa,automation
+121,e2e testing,qa,automation
+122,selenium,qa,automation
+123,cypress,qa,automation
+124,playwright,qa,automation
+125,jest,qa,testing
+126,vitest,qa,testing
+127,pytest,qa,testing
+128,unittest,qa,testing
+129,spock,qa,testing
+130,quickcheck,qa,testing
+131,redux,state,management
+132,ngrx,state,management
+133,rxjs,library,reactive
+134,provider,state,management
+135,bloc,state,management
+136,riverpod,state,management
+137,mobx,state,management
+138,core data,database,local
+138,room,database,local
+139,realm,database,local
+140,sqlite,database,local
+141,firebase,cloud,backend
+142,supabase,cloud,backend
+143,appwrite,cloud,backend
+144,graphql,api,query
+145,apollo,api,client
+146,urql,api,client
+147,tanstack query,api,client
+148,swr,api,client
+149,axios,http,client
+150,fetch,http,client

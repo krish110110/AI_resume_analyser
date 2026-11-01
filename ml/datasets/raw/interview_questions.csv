@@ -1,0 +1,41 @@
+id,skill,question,difficulty
+1,python,What are Python decorators?,medium
+2,react,Explain React hooks,medium
+3,sql,What is a JOIN?,easy
+4,machine learning,What is overfitting?,medium
+5,docker,What is a container?,easy
+6,java,What is the difference between ArrayList and LinkedList?,easy
+7,python,Explain Python's GIL,medium
+8,react,What is virtual DOM?,easy
+9,sql,Explain ACID properties,medium
+10,aws,What is EC2?,easy
+11,kubernetes,What is a pod?,easy
+12,machine learning,Explain bias-variance tradeoff,hard
+13,python,What are generators?,medium
+14,react,Explain useEffect cleanup,medium
+15,sql,What is normalization?,medium
+16,typescript,What are generics?,medium
+17,go,Explain goroutines,medium
+18,rust,What is ownership?,medium
+19,swift,What is ARC?,easy
+20,kotlin,What are coroutines?,medium
+21,postgresql,What is MVCC?,medium
+22,mongodb,What is sharding?,medium
+23,redis,Explain Redis data types,easy
+24,docker,Explain multi-stage builds,medium
+25,kubernetes,Explain services vs deployments,medium
+26,tensorflow,What is a tensor?,easy
+27,pytorch,Explain autograd,medium
+28,scikit-learn,What is cross-validation?,easy
+29,airflow,What is a DAG?,easy
+30,spark,Explain RDD vs DataFrame,medium
+31,kafka,What is a consumer group?,medium
+32,terraform,What is state file?,easy
+33,ansible,Explain idempotency,medium
+34,git,Explain rebase vs merge,medium
+35,ci/cd,What is continuous deployment?,easy
+36,testing,What is TDD?,easy
+37,microservices,What is service discovery?,medium
+38,serverless,What is cold start?,easy
+39,graphql,Explain N+1 problem,medium
+40,rest,What is HATEOAS?,medium

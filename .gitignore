@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment configurations & secrets
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Local IDE and Tool configurations
+.vscode/
+.idea/
+.kilo/
+*.swp
+
+# Storage & Uploads (Ignore actual uploads/reports, preserve folder structure with .gitkeep)
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/generated_reports/*
+!storage/generated_reports/.gitkeep
+
+backend/storage/uploads/*
+!backend/storage/uploads/.gitkeep
+backend/storage/uploads/resumes/*
+!backend/storage/uploads/resumes/.gitkeep
+backend/storage/generated_reports/*
+!backend/storage/generated_reports/.gitkeep
+**/uploads/resumes/*
+!**/uploads/resumes/.gitkeep
+
+# Logs and scratch files
+*.log
+backend/logs.txt
+backend/test_db.py
+backend/test_register.py
+backend/test_register2.py
+
+# Node & package artifacts
+node_modules/
+dist/
+build/
+*.egg-info/
+
+# Testing & Coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/

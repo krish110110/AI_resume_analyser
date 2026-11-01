@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume - AI Resume Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/user-dashboard.css">
+    <link rel="stylesheet" href="../css/upload.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand"><span class="nav-brand-mark">RA</span> Resume Analyzer</div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></span> Dashboard</a>
+                <a href="upload.html" class="nav-item active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span> Upload Resume</a>
+                <a href="history.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg></span> History</a>
+                <a href="profile.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span> Profile</a>
+                <a href="#" id="logoutBtn" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg></span> Sign out</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="top-bar">
+                <div>
+                    <h1>Upload Resume</h1>
+                    <p class="text-muted mt-1">Analyse a resume and get scored results immediately</p>
+                </div>
+            </header>
+
+            <div class="upload-layout">
+                <section class="upload-section">
+                    <form id="uploadForm" class="upload-form card" novalidate>
+                        <div class="form-heading">
+                            <span class="step-badge">Step 1</span>
+                            <h2>Upload your resume</h2>
+                            <p>We extract your skills, score your resume, and build interview questions from it.</p>
+                        </div>
+
+                        <div class="upload-zone" id="uploadZone" role="button" tabindex="0"
+                             aria-label="Upload your resume file. Drag and drop or press Enter to browse.">
+                            <div class="upload-icon-wrap">
+                                <span class="upload-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 14h6M9 18h4"/></svg></span>
+                            </div>
+                            <p class="upload-title"><strong>Drag &amp; drop your resume</strong></p>
+                            <p class="upload-subtitle">or <span class="browse-link">browse files</span> from your computer</p>
+                            <div class="format-chips">
+                                <span class="format-chip">PDF</span>
+                                <span class="format-chip">DOCX</span>
+                                <span class="format-chip">TXT</span>
+                                <span class="format-chip muted">Max 10 MB</span>
+                            </div>
+                            <input type="file" id="resumeFile" name="resumeFile" accept=".pdf,.docx,.txt" required>
+                        </div>
+                        <p class="field-error hidden" id="fileError" role="alert"></p>
+
+                        <div class="file-info" id="fileInfo">
+                            <div class="file-icon" id="fileIcon">PDF</div>
+                            <div class="file-details">
+                                <div class="file-name" id="fileName"></div>
+                                <div class="file-size" id="fileSize"></div>
+                            </div>
+                            <span class="file-ready">Ready</span>
+                            <button type="button" class="file-remove" id="fileRemove" aria-label="Remove selected file">&times;</button>
+                        </div>
+
+                        <div class="form-heading mt-5">
+                            <span class="step-badge">Step 2</span>
+                            <h2>Job description <span class="optional-tag">Optional</span></h2>
+                            <p>Add a job description to get a match score and a tailored missing-skills list.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="label-row">
+                                <label for="jobDescription">Paste the job description</label>
+                                <span class="char-count" id="jobDescCount">0 characters</span>
+                            </div>
+                            <textarea id="jobDescription" name="jobDescription" rows="6"
+                                      placeholder="Paste the full job description here for a match score..."></textarea>
+                        </div>
+
+                        <div class="form-heading mt-5">
+                            <span class="step-badge">Step 3</span>
+                            <h2>Choose an analysis</h2>
+                            <p>Pick how deep we should look at your resume.</p>
+                        </div>
+
+                        <div class="segmented-control" role="radiogroup" aria-label="Analysis type">
+                            <label class="segment active" data-value="full">
+                                <input type="radio" name="analysisType" value="full" checked>
+                                <span class="segment-title">Full Analysis</span>
+                                <span class="segment-desc">Skills, scores, gaps, interview questions</span>
+                            </label>
+                            <label class="segment" data-value="quick">
+                                <input type="radio" name="analysisType" value="quick">
+                                <span class="segment-title">Quick Check</span>
+                                <span class="segment-desc">Fast skills and ATS score only</span>
+                            </label>
+                            <label class="segment" data-value="ats_only">
+                                <input type="radio" name="analysisType" value="ats_only">
+                                <span class="segment-title">ATS Only</span>
+                                <span class="segment-desc">Recruiter screen pass or fail score</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg analyze-btn" id="analyzeBtn">
+                            <span class="btn-label">Analyze Resume</span>
+                        </button>
+                        <p class="privacy-note">Your resume is stored securely and is only visible to you and platform administrators.</p>
+                    </form>
+
+                    <div id="uploadProgress" class="progress hidden" aria-live="polite">
+                        <div class="progress-header">
+                            <span id="progressText" class="progress-text">Uploading...</span>
+                            <span id="progressPercent" class="progress-percent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-inner" id="progressBar" style="width: 0%"></div>
+                        </div>
+                        <ul class="progress-steps" id="progressSteps">
+                            <li class="progress-step active" data-step="upload">Uploading file</li>
+                            <li class="progress-step" data-step="extract">Extracting skills</li>
+                            <li class="progress-step" data-step="score">Scoring resume</li>
+                            <li class="progress-step" data-step="questions">Building interview questions</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <aside class="upload-aside">
+                    <div class="aside-card card">
+                        <h3>What you get</h3>
+                        <ul class="benefit-list">
+                            <li><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></svg></span><div><strong>ATS Score</strong><span>How well your resume passes an automated screen.</span></div></li>
+                            <li><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v4h-4z"/><path d="M6 7h12v4H6z"/><path d="M9 11h6v4H9z"/><path d="M11 15h2v6h-2z"/></svg></span><div><strong>Skills Detected</strong><span>Real languages and frameworks found in your resume.</span></div></li>
+                            <li><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><div><strong>Skill Gaps</strong><span>Exactly what to add, based on your category and level.</span></div></li>
+                            <li><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><strong>Interview Questions</strong><span>2 questions per skill, including the hard ones.</span></div></li>
+                        </ul>
+                    </div>
+
+                    <div class="aside-card card">
+                        <h3>Tips for a better score</h3>
+                        <ul class="tip-list">
+                            <li>Use clear section headings like <em>Experience</em> and <em>Skills</em>.</li>
+                            <li>List your technologies explicitly, not only in project descriptions.</li>
+                            <li>Mention your years of experience and highest degree.</li>
+                            <li>Keep the file under 10 MB and make sure the text is selectable.</li>
+                        </ul>
+                    </div>
+
+                    <div class="aside-card card">
+                        <h3>Supported files</h3>
+                        <ul class="support-list">
+                            <li><span class="support-ext pdf">PDF</span> Best for most resumes</li>
+                            <li><span class="support-ext docx">DOCX</span> Word documents</li>
+                            <li><span class="support-ext txt">TXT</span> Plain text</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script src="../js/config.js?v=2"></script>
+    <script src="../js/common.js?v=2"></script>
+    <script src="../js/api.js?v=2"></script>
+    <script src="../js/auth/auth-guard.js?v=2"></script>
+    <script src="../js/user/upload.js?v=2"></script>
+    <script>initUpload();</script>
+</body>
+</html>

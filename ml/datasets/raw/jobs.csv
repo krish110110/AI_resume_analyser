@@ -1,0 +1,16 @@
+id,title,company,description,skills,created_at
+1,Software Engineer,GameStudio,Develop web applications using Python and React. Build scalable backend services.,"python, react, sql, aws, docker",2024-01-10
+2,Data Scientist,GameStudio,Analyze data and build ML models. Work with large datasets and create predictive models.,"python, machine learning, sql, pandas, scikit-learn",2024-01-11
+3,Senior Backend Developer,InfraTech,Design and implement microservices using Java and Spring Boot. Deploy on AWS with Docker.,"java, spring boot, hibernate, postgresql, aws",2024-01-12
+4,Frontend Developer,BigDataCorp,"Create responsive UIs with React, Redux, and TypeScript. Optimize for performance.","javascript, react, redux, typescript, node.js",2024-01-13
+5,ML Engineer,DataInc,Build and deploy ML models using TensorFlow/PyTorch. Computer vision and NLP tasks.,"python, tensorflow, pytorch, keras, opencv",2024-01-14
+6,Data Engineer,GameStudio,Build ETL pipelines with Airflow and Spark. Manage Kafka streams and data warehouses.,"sql, python, airflow, spark, kafka",2024-01-15
+7,DevOps Engineer,DataInc,"Manage Kubernetes clusters, CI/CD pipelines with Terraform. Monitoring with Prometheus/Grafana.","go, kubernetes, terraform, prometheus, grafana",2024-01-16
+8,iOS Developer,CloudSystems,Build iOS apps with Swift and SwiftUI. Integrate with Core Data and CloudKit.,"swift, swiftui, xcode, core data, ios",2024-01-17
+9,Full Stack Developer,CloudSystems,Build end-to-end features with Ruby on Rails and PostgreSQL.,"ruby, rails, postgresql, redis, sidekiq",2024-01-18
+10,Android Developer,MobileAppCo,Build Android apps with Kotlin and Jetpack Compose.,"kotlin, android, jetpack compose, room, retrofit",2024-01-19
+11,Cloud Architect,BigDataCorp,"Design cloud architectures. Kubernetes, Terraform, serverless with Lambda.","aws, kubernetes, terraform, lambda, cloudformation",2024-01-20
+12,Security Engineer,WebAgency,"Application security, penetration testing. OWASP compliance.","python, burp suite, metasploit, splunk, owasp",2024-01-21
+13,Embedded Systems Engineer,TechCorp,Real-time systems with C and ARM. Control systems with MATLAB.,"c, assembly, arm, x86, matlab",2024-01-22
+14,Blockchain Developer,AIStartup,Smart contracts with Solidity. Web3 integration with Hardhat.,"solidity, web3, hardhat, ethers.js, ipfs",2024-01-23
+15,Systems Programmer,GameStudio,High-performance systems with Rust. Async programming with Tokio.,"rust, tokio, actix, postgres, diesel",2024-01-24
