@@ -128,12 +128,8 @@ See `.env.example` for required environment variables.
 MIT License
 
 
-
-
 backen running commande:-  cd C:\AI-Resume-Analyzer\backend
 environment turn on :-  .\venv\Scripts\Activate.ps1
-
-
 
 frontend running command :-cd C:\AI-Resume-Analyzer\frontend
 python -m http.server 3000
